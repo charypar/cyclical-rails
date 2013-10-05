@@ -1,0 +1,2 @@
+module CyclicalRails
+end
