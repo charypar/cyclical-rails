@@ -11,13 +11,13 @@ Cyclical lets you list recurring events with complex recurrence rules like "ever
 Add the ```cyclical-rails``` gem in your Gemfile
 
 ```ruby
-  gem "cyclical-rails"
+gem "cyclical-rails"
 ```
 
 The ```cyclical``` JavaScript library will be added to the asset pipeline. To use them add the following to ```app/assets/javascript/application.js```:
 
 ```javascript
-  //= require cyclical
+//= require cyclical
 ```
 
 ## Usage
@@ -27,15 +27,15 @@ The ```cyclical``` JavaScript library will be added to the asset pipeline. To us
 In your controller you do:
 
 ```ruby
-  schedule = Cyclical::Schedule.new Time.now, Cyclical::Rule.daily(2).count(3)
-  schedule.occurrences
+schedule = Cyclical::Schedule.new Time.now, Cyclical::Rule.daily(2).count(3)
+schedule.occurrences
 ```
 
 in your javascript you do:
 
 ```javascript
-  var schedule = new Schedule(new Date, Schedule.Rule.daily(2).count(3));
-  var occ = schedule.occurrences();
+var schedule = new Schedule(new Date, Schedule.Rule.daily(2).count(3));
+var occ = schedule.occurrences();
 ```
 
 and you get the same results.
@@ -43,13 +43,13 @@ and you get the same results.
 You can send schedules over the wire as JSON. Serialize in ERB
 
 ```
-  schedule_json = '<%= @schedule.to_json.html_safe %>';
+schedule_json = '<%= @schedule.to_json.html_safe %>';
 ```
 
 and load in javascript
 
 ```javascript
-  var schedule = Schedule.fromJSON(schedule_json);
+var schedule = Schedule.fromJSON(schedule_json);
 ```
 
 The same also works the other way round.
