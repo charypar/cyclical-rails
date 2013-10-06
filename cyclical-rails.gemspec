@@ -6,13 +6,14 @@ Gem::Specification.new do |s|
   s.version     = Cyclical::Rails::VERSION
   s.authors     = ["Viktor Charypar"]
   s.email       = ["charypar@gmail.com"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of CyclicalRails."
-  s.description = "TODO: Description of CyclicalRails."
+  s.homepage    = "https://github.com/charypar/cyclical-rails"
+  s.summary     = "Cyclical support for Rails 3"
+  s.description = "Provides integration with ruby and JavaScript versions of Cyclical recurring events library for your rails application."
+  s.licencse    = "MIT"
 
   s.files = `git ls-files`.split("\n")
   s.require_path = 'lib'
 
-  s.add_dependency "railties", ">= 3.1"
-  s.add_dependency "cyclical", "~> 0.1.0"
+  s.add_runtime_dependency "railties", ">= 3.1"
+  s.add_runtime_dependency "cyclical", "~> 0.1.0"
 end
