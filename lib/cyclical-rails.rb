@@ -1,2 +1,2 @@
-module CyclicalRails
-end
+require 'cyclical'
+require 'cyclical/rails'
