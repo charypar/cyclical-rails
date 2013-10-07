@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.homepage    = "https://github.com/charypar/cyclical-rails"
   s.summary     = "Cyclical support for Rails 3"
   s.description = "Provides integration with ruby and JavaScript versions of Cyclical recurring events library for your rails application."
-  s.licencse    = "MIT"
+  s.license     = "MIT"
 
   s.files = `git ls-files`.split("\n")
   s.require_path = 'lib'
